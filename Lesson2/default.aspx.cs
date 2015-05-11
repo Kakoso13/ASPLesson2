@@ -43,5 +43,23 @@ namespace Lesson2
             //remove the text from the text box
             txtFirstName.Text = "";
         }
+
+        protected void btnSelections_click(object sender, EventArgs e)
+        {
+            //show the selected country in the literal control
+            ltlFirstName.Text = ddlCountry.SelectedValue + " " + ddlCountry.SelectedItem;
+
+            //first clear the toppings literal
+            ltlToppings.Text = "";
+
+            //loop through the tooping and print out the selected topping list
+            foreach (ListItem item in cblToppings.Items)
+            {
+                if (item.Selected)
+                {
+                    ltlToppings.Text += item.Text + " ";
+                }
+            }
+        }
     }
 }

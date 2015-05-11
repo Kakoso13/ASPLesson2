@@ -32,7 +32,7 @@
             <asp:ListItem Value="3" Text="Mushrooms"></asp:ListItem>
 
         </asp:CheckBoxList>
-
+        <asp:Button ID="btnSelections" runat="server" Text="Show Selections" OnClick="btnSelections_click" />
         
 
     </div>
